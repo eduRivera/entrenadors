@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Partits Jugadors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Partit</th>
+      <th>Jugador</th>
+      <th>Titular</th>
+      <th>No convocat</th>
+      <th>Min disp</th>
+      <th>Gols</th>
+      <th>Targetes grogues</th>
+      <th>Targetes vermelles</th>
+      <th>Partit no disp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @partits_jugadors.each do |partits_jugador| %>
+      <tr>
+        <td><%= partits_jugador.partit %></td>
+        <td><%= partits_jugador.jugador %></td>
+        <td><%= partits_jugador.titular %></td>
+        <td><%= partits_jugador.no_convocat %></td>
+        <td><%= partits_jugador.min_disp %></td>
+        <td><%= partits_jugador.gols %></td>
+        <td><%= partits_jugador.targetes_grogues %></td>
+        <td><%= partits_jugador.targetes_vermelles %></td>
+        <td><%= partits_jugador.partit_no_disp %></td>
+        <td><%= link_to 'Show', partits_jugador %></td>
+        <td><%= link_to 'Edit', edit_partits_jugador_path(partits_jugador) %></td>
+        <td><%= link_to 'Destroy', partits_jugador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Partits jugador', new_partits_jugador_path %>

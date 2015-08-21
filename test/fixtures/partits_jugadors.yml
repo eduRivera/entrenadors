@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partit_id: 
+  jugador_id: 
+  titular: false
+  no_convocat: false
+  min_disp: 1
+  gols: 1
+  targetes_grogues: 1
+  targetes_vermelles: 1
+  partit_no_disp: false
+
+two:
+  partit_id: 
+  jugador_id: 
+  titular: false
+  no_convocat: false
+  min_disp: 1
+  gols: 1
+  targetes_grogues: 1
+  targetes_vermelles: 1
+  partit_no_disp: false

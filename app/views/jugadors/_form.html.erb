@@ -1,0 +1,52 @@
+<%= form_for(@jugador) do |f| %>
+  <% if @jugador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jugador.errors.count, "error") %> prohibited this jugador from being saved:</h2>
+
+      <ul>
+      <% @jugador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nom %><br>
+    <%= f.text_field :nom, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :cognoms %><br>
+    <%= f.text_field :cognoms, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :foto %><br>
+    <%= f.text_field :foto, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :data_neix %><br>
+    <%= f.date_select :data_neix , start_year: 1994, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :categoria %><br>
+    <%= f.text_field :categoria, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :equips %><br>
+    <%= f.text_field :equips, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :posicio %><br>
+    <%= f.text_field :posicio, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :cama_dominant %><br>
+    <%= f.text_field :cama_dominant, :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :entrenador_id, :value => current_entrenador.id, :readonly => true, :class => "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Guardar', :class => 'btn btn-danger'%>
+  </div>
+<% end %>

@@ -1,0 +1,53 @@
+<%= form_for(@partits_jugador) do |f| %>
+  <% if @partits_jugador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@partits_jugador.errors.count, "error") %> prohibited this partits_jugador from being saved:</h2>
+
+      <ul>
+      <% @partits_jugador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partit_id %><br>
+    <%= f.text_field :partit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :jugador_id %><br>
+    <%= f.text_field :jugador_id %>
+  </div>
+  <div class="field">
+    <%= f.label :titular %><br>
+    <%= f.check_box :titular %>
+  </div>
+  <div class="field">
+    <%= f.label :no_convocat %><br>
+    <%= f.check_box :no_convocat %>
+  </div>
+  <div class="field">
+    <%= f.label :min_disp %><br>
+    <%= f.number_field :min_disp %>
+  </div>
+  <div class="field">
+    <%= f.label :gols %><br>
+    <%= f.number_field :gols %>
+  </div>
+  <div class="field">
+    <%= f.label :targetes_grogues %><br>
+    <%= f.number_field :targetes_grogues %>
+  </div>
+  <div class="field">
+    <%= f.label :targetes_vermelles %><br>
+    <%= f.number_field :targetes_vermelles %>
+  </div>
+  <div class="field">
+    <%= f.label :partit_no_disp %><br>
+    <%= f.check_box :partit_no_disp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

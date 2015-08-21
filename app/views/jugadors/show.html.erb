@@ -1,0 +1,82 @@
+<% if entrenador_signed_in? %>
+  <div class="header">
+    <div class="header-top">
+      <div class="container">
+          <div class="header-right-text">
+            <h3><span><%= current_entrenador.email %></span><i><%= link_to "Logout", destroy_entrenador_session_path,:class =>"font_color_red", method: :delete %></i></h3>
+          </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  <div class="header-nav">
+    <div class="container">
+      <div class="logo">
+        <a href="/"><img src="../assets/cercle_logo_1_2.png" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"> </div>
+  </div>        
+<p id="notice"><%= notice %></p>
+<div class="container text_aling_center margin_top_midle">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-2">
+      <img class="img-circle" src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png" alt="Generic placeholder image" width="140" height="140">
+    </div>
+    <div class="col-lg-3">
+      <p>
+        <strong>Nom:</strong>
+        <%= @jugador.nom %>
+      </p>
+
+      <p>
+        <strong>Cognoms:</strong>
+        <%= @jugador.cognoms %>
+      </p>
+
+      <p>
+        <strong>Data neix:</strong>
+        <%= @jugador.data_neix %>
+      </p>
+
+      <p>
+        <strong>Categoria:</strong>
+        <%= @jugador.categoria %>
+      </p>
+
+      <p>
+        <strong>Equips:</strong>
+        <%= @jugador.equips %>
+      </p>
+
+      <p>
+        <strong>Posicio:</strong>
+        <%= @jugador.posicio %>
+      </p>
+
+      <p>
+        <strong>Cama dominant:</strong>
+        <%= @jugador.cama_dominant %>
+      </p>
+
+      <p>
+        <strong>Entrenador:</strong>
+        <%= @jugador.entrenador.email %>
+      </p>
+    </div>
+    <div class="col-lg-2">
+    </div>
+    <br>
+    <%= link_to 'Editar', edit_jugador_path(@jugador) %> |
+    <%= link_to 'Llista Jugadors', jugadors_path %>
+  </div>
+</div>
+<%else%>
+  <p><%= link_to "Crear una conta", new_entrenador_registration_path %></p>
+  <p>Si ja tens una conta: <%=link_to "Login", new_entrenador_session_path %></p>
+
+<%end%>
+
+

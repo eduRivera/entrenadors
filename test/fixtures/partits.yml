@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jornada: MyString
+  data_partit: 2015-08-15
+  rival: MyString
+  comentaris: MyString
+  entrenador_id: 
+
+two:
+  jornada: MyString
+  data_partit: 2015-08-15
+  rival: MyString
+  comentaris: MyString
+  entrenador_id: 

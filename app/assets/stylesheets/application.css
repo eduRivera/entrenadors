@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/***** Background Colors ****/
+.background_color_black{
+	background-color: black;
+}
+.background_color_red{
+	background-color: red;
+}
+.background_color_blue{
+	background-color: blue;
+}
+/****************************/
+
+/***** Font Colors ****/
+.font_color_black{
+	color:black!important;
+}
+.font_color_white{
+	color:white!important;
+}
+.font_color_red{
+	color:#B42E25!important;
+}
+/*********************/
+
+/*****Positions*******/
+.position_left{
+	float:left;
+}
+.position_right{
+	float:right;
+}
+/**********************/
+
+/*****Margins**********/
+.margin_small{
+	margin:3px
+}
+.margin_right_small{
+	margin-right:3px
+}
+.margin_left_small{
+	margin-right:3px
+}
+.margin_top_small{
+	margin-top:3px
+}
+.margin_bottom_small{
+	margin-bottom:3px
+}
+.margin_midle{
+	margin:10px;
+}
+.margin_top_midle{
+	margin-top:10px;
+}
+.margin_right_midle{
+	margin-right:10px;
+}
+.margin_left_midle{
+	margin-left:10px;
+}
+.margin_bottom_midle{
+	margin-bottom:10px;
+}
+/**********************/
+
+/*****Text Aling*******/
+.text_aling_center{
+	text-align: center;
+}
+/**********************/
+/********Width Containers*********/
+.with_container_small{
+	width: 150px;
+}
+.with_container_normal{
+	width: 300px;
+}
+.with_container_large{
+	width: 600px;
+}
+/**********************/

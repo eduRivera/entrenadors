@@ -1,0 +1,35 @@
+<% if entrenador_signed_in? %>
+  <div class="header">
+    <div class="header-top">
+      <div class="container">
+          <div class="header-right-text">
+            <h3><span><%= current_entrenador.email %></span><i><%= link_to "Logout", destroy_entrenador_session_path,:class =>"font_color_red", method: :delete %></i></h3>
+          </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  <div class="header-nav">
+    <div class="container">
+      <div class="logo">
+        <a href="/"><img src="/../assets/cercle_logo_1_2.png" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"> </div>
+  </div>
+  <div class="container text_aling_center margin_top_midle with_container_normal">    
+	<h3>Editar Jugador</h3>
+	<div class="form-group">
+	<%= render 'form' %>
+	</div>
+	<br>
+	<%= link_to 'Info', @jugador %> |
+	<%= link_to 'Llista Jugadors', jugadors_path %>
+	<br>
+  </div>
+<%else%>
+  <p><%= link_to "Crear una conta", new_entrenador_registration_path %></p>
+  <p>Si ja tens una conta: <%=link_to "Login", new_entrenador_session_path %></p>
+
+<%end%>
+

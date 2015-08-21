@@ -1,0 +1,2 @@
+module PartitsJugadorsHelper
+end

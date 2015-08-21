@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jornada:</strong>
+  <%= @partit.jornada %>
+</p>
+
+<p>
+  <strong>Data partit:</strong>
+  <%= @partit.data_partit %>
+</p>
+
+<p>
+  <strong>Rival:</strong>
+  <%= @partit.rival %>
+</p>
+
+<p>
+  <strong>Comentaris:</strong>
+  <%= @partit.comentaris %>
+</p>
+
+<p>
+  <strong>Entrenador:</strong>
+  <%= @partit.entrenador.email %>
+</p>
+
+<%= link_to 'Edit', edit_partit_path(@partit) %> |
+<%= link_to 'Back', partits_path %>

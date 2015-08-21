@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Partit:</strong>
+  <%= @partits_jugador.partit %>
+</p>
+
+<p>
+  <strong>Jugador:</strong>
+  <%= @partits_jugador.jugador %>
+</p>
+
+<p>
+  <strong>Titular:</strong>
+  <%= @partits_jugador.titular %>
+</p>
+
+<p>
+  <strong>No convocat:</strong>
+  <%= @partits_jugador.no_convocat %>
+</p>
+
+<p>
+  <strong>Min disp:</strong>
+  <%= @partits_jugador.min_disp %>
+</p>
+
+<p>
+  <strong>Gols:</strong>
+  <%= @partits_jugador.gols %>
+</p>
+
+<p>
+  <strong>Targetes grogues:</strong>
+  <%= @partits_jugador.targetes_grogues %>
+</p>
+
+<p>
+  <strong>Targetes vermelles:</strong>
+  <%= @partits_jugador.targetes_vermelles %>
+</p>
+
+<p>
+  <strong>Partit no disp:</strong>
+  <%= @partits_jugador.partit_no_disp %>
+</p>
+
+<%= link_to 'Edit', edit_partits_jugador_path(@partits_jugador) %> |
+<%= link_to 'Back', partits_jugadors_path %>

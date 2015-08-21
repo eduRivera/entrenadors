@@ -1,0 +1,78 @@
+<% if entrenador_signed_in? %>
+	<div class="header">
+		<div class="header-top">
+			<div class="container">
+					<div class="header-right-text">
+						<h3><span><%= current_entrenador.email %></span><i><%= link_to "Logout", destroy_entrenador_session_path,:class =>"font_color_red", method: :delete %></i></h3>
+					</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+<div class="header-nav">
+	<div class="container">
+		<div class="logo">
+			<a href="index.html"><img src="assets/cercle_logo_1_2.png" /></a>
+		</div>
+		<div class="navigation">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					  </button>
+					</div>
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Inici <span class="sr-only">(current)</span></a></li>
+						<li><a href="jugadors/">Jugadors</a></li>
+						<li><a href="partits/">Partits</a></li>
+						<li><a href="blog.html">Blog</a></li>
+					  </ul>
+			  <div class="clearfix"> </div>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+	</div>
+	</div>
+	</div>
+	<div class="clearfix"> </div>
+</div>			 	
+<!--/header-->
+<div class="welcome">
+	<div class="container">
+		<div class="col-md-4 welcome-img">
+			<img src="assets/weelcome.jpg" alt="" />
+		</div>
+		<div class="col-md-8 welcome-text">
+			<h4>Welcome To Our Furnish Gallery</h4>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+				laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+				 architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+				  sit aspernatur aut odit aut fugit.</p>
+		</div>
+	</div>
+</div>
+<div class="index-about">
+	<div class="container">
+			    <h3>ABOUT</h3>
+				<p>Dolor nunc vule putateulr ips dol consec.Donec sem ertet laciniate ultricie upie disse utes comete dolo lectus. fgilla itollicil tua ludin dolor nec met quam accumsan. Dolore condime netus lullam utlacus adipiscing ipsum molestie euismod lore estibulum vel libero ipsum sit
+				amet sollicitudin ante. Aenean imperdiet aliquet hendreritunc interdum ullamcorper lec tuset pellentesqu enim interdum atuspendisse malesuada dignissim.</p>
+			 </div>
+		</div>
+<!--footer-starts-->
+	<div class="footer">
+		<div class="container">
+			<div class="copy-rights">
+				<p>&copy; 2015 Furnished. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+			</div>
+		</div>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!----> 
+	</div>
+
+<%else%>
+	<p><%= link_to "Crear una conta", new_entrenador_registration_path %></p>
+	<p>Si ja tens una conta: <%=link_to "Login", new_entrenador_session_path %></p>
+
+<%end%>

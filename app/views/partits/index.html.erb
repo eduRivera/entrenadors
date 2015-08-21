@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Partits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jornada</th>
+      <th>Data partit</th>
+      <th>Rival</th>
+      <th>Comentaris</th>
+      <th>Entrenador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @partits.each do |partit| %>
+      <tr>
+        <td><%= partit.jornada %></td>
+        <td><%= partit.data_partit %></td>
+        <td><%= partit.rival %></td>
+        <td><%= partit.comentaris %></td>
+        <td><%= partit.entrenador.email %></td>
+        <td><%= link_to 'Show', partit %></td>
+        <td><%= link_to 'Edit', edit_partit_path(partit) %></td>
+        <td><%= link_to 'Destroy', partit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Partit', new_partit_path %>

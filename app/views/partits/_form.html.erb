@@ -1,0 +1,36 @@
+<%= form_for(@partit) do |f| %>
+  <% if @partit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@partit.errors.count, "error") %> prohibited this partit from being saved:</h2>
+
+      <ul>
+      <% @partit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :jornada %><br>
+    <%= f.text_field :jornada %>
+  </div>
+  <div class="field">
+    <%= f.label :data_partit %><br>
+    <%= f.date_select :data_partit %>
+  </div>
+  <div class="field">
+    <%= f.label :rival %><br>
+    <%= f.text_field :rival %>
+  </div>
+  <div class="field">
+    <%= f.label :comentaris %><br>
+    <%= f.text_field :comentaris %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :entrenador_id, :value => current_entrenador.id, :readonly => true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

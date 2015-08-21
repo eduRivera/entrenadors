@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  cognoms: MyString
+  foto: MyString
+  data_neix: 2015-08-15
+  categoria: MyString
+  equips: MyString
+  posicio: MyString
+  cama_dominant: MyString
+  entrenador_id: 
+
+two:
+  nom: MyString
+  cognoms: MyString
+  foto: MyString
+  data_neix: 2015-08-15
+  categoria: MyString
+  equips: MyString
+  posicio: MyString
+  cama_dominant: MyString
+  entrenador_id: 
